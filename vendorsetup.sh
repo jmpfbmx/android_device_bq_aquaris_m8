@@ -1,2 +1,2 @@
 
-add_lunch_combo karin-eng
+add_lunch_combo omni_karin-eng
