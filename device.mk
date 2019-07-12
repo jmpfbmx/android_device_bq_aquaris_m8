@@ -1,4 +1,4 @@
-LOCAL_PATH := device/malatamobile/bq_aquaris_m8
+LOCAL_PATH := device/malatamobile/Aquaris_M8
 
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
@@ -19,3 +19,5 @@ ifneq (,$(filter eng,$(TARGET_BUILD_VARIANT)))
 	PRODUCT_SUPPORTS_BOOT_SIGNER := true
 	PRODUCT_VERITY_SIGNING_KEY := build/target/product/security/verity
 endif
+
+PRODUCT_NAME := Aquaris_M8

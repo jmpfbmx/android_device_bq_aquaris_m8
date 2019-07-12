@@ -1,2 +1,4 @@
 
-add_lunch_combo Aquaris_M8-eng
+add_lunch_combo omni_Aquaris_M8-eng
+add_lunch_combo omni_Aquaris_M8-userdebug
+
