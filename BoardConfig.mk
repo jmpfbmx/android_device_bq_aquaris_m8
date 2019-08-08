@@ -26,7 +26,7 @@ TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/malatamobile/Aquaris_M8/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/bq/Aquaris_M8/Image.gz-dtb
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 BOARD_MKBOOTIMG_ARGS := --pagesize 2048 --base 0x40078000 --kernel_offset 0x00008000 --ramdisk_offset 0x05f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000
 
@@ -44,6 +44,7 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 
 # TWRP-Specific
+TARGET_RECOVERY_FSTAB := device/bq/Aquaris_M8/recovery/etc/twrp.fstab
 TW_THEME := portrait_hdpi
 TW_DEFAULT_EXTERNAL_STORAGE := true
 TW_INCLUDE_CRYPTO := true
@@ -53,3 +54,6 @@ TW_DEFAULT_BRIGHTNESS := 128
 TW_CUSTOM_CPU_TEMP_PATH := /sys/devices/virtual/thermal/thermal_zone1/temp
 TW_EXCLUDE_ENCRYPTED_BACKUPS := false
 TW_NO_EXFAT := false
+
+# MTK HEADERS
+BOARD_CUSTOM_BOOTIMG_MK := device/bq/Aquaris_M8/custombootimg.mk
