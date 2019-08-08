@@ -1,5 +1,5 @@
 # Inherit device configuration
-$(call inherit-product, device/malatamobile/Aquaris_M8/device.mk)
+$(call inherit-product, device/bq/Aquaris_M8/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := Aquaris_M8
