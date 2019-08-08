@@ -56,4 +56,4 @@ TW_EXCLUDE_ENCRYPTED_BACKUPS := false
 TW_NO_EXFAT := false
 
 # MTK HEADERS
-BOARD_CUSTOM_BOOTIMG_MK := device/bq/Aquaris_M8/custombootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/bq/Aquaris_M8/mkbootimg.mk
