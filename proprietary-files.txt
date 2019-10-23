@@ -453,3 +453,13 @@ vendor/pittpatt/models/recognition/face.face.y0-y0-71-N-tree_7-wmd.bin
 vendor/pittpatt/models/detection/yaw_roll_face_detectors.7.1
 vendor/pittpatt/models/detection/multi_pose_face_landmark_detectors.8
 
+# Sink libs
+lib/libsink.so
+lib64/libsink.so
+lib/libcomutils.so
+lib64/libcomutils.so
+lib/libvcodec_cap.so
+lib64/libvcodec_cap.so
+lib/libvt_avsync.so
+lib64/libvt_avsync.so
+
