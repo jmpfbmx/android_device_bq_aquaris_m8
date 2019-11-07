@@ -102,6 +102,10 @@ libshim_vold \
 libshim_media \
 libshim_audio
 
+# GPS
+PRODUCT_PACKAGES += \
+    YGPS
+
 
 # Zygote
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
