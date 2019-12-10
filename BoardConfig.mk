@@ -145,7 +145,6 @@ TARGET_LD_SHIM_LIBS := \
 /system/lib64/libmedia_jni.so|libkarin.so \
 /system/lib/hw/audio.primary.mt8163.so|libkarin.so \
 /system/lib64/hw/audio.primary.mt8163.so|libkarin.so \
-<<<<<<< HEAD
 /system/lib/libandroid_runtime.so|libxlog.so \
 /system/lib64/libandroid_runtime.so|libxlog.so \
 /system/lib/libui_ext.so|libkarin.so \
