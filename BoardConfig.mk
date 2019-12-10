@@ -146,10 +146,14 @@ TARGET_LD_SHIM_LIBS := \
 /system/lib/hw/audio.primary.mt8163.so|libkarin.so \
 /system/lib64/hw/audio.primary.mt8163.so|libkarin.so \
 /system/lib/libandroid_runtime|libxlog.so \
-/system/lib64/libandroid_runtime|libxlog.so
+/system/lib64/libandroid_runtime|libxlog.so \
+/system/lib/libui_ext.so|libkarin.so \
+/system/lib64/libui_ext.so|libkarin.so \
+/system/lib/libgui_ext.so|libkarin.so \
+/system/lib64/libgui_ext.so|libkarin.so
 
-# libxlog
-TARGET_LDPRELOAD := libxlog.so
+# Symbols
+TARGET_LDPRELOAD := libxlog.so:libkarin.so
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \

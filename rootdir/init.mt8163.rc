@@ -24,7 +24,8 @@ on init
     # setprop ro.vold.primary_physical 1
 
     # LibShims support
-    export LD_SHIM_LIBS "/system/lib/libmedia_jni.so|vendor/lib/libshim_media.so:/system/lib64/libmedia_jni.so|vendor/lib64/libshim_media.so"
+    export LD_PRELOAD "libxlog.so:libkarin.so"
+    export LD_SHIM_LIBS "/system/lib/libmedia_jni.so|vendor/lib/libkarin.so:/system/lib64/libmedia_jni.so|vendor/lib64/libkarin.so:/system/lib/libui_ext.so|vendor/lib/libkarin.so:/system/lib64/libui_ext.so|vendor/lib64/libkarin.so:/system/lib/libgui_ext.so|vendor/lib/libkarin.so:/system/lib64/libgui.so|vendor/lib64/libkarin.so"
 
     # BATTERY proc
     chown shell system /proc/mtk_battery_cmd/current_cmd

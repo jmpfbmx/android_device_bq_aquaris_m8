@@ -21,6 +21,8 @@ ADRL            R12, 0x490F8
 LDR             PC, [R12,#(_ZN7android11AudioSystem24getVoiceUnlockDLInstanceEv_ptr - 0x490F8)]! ; android::AudioSystem::getVoiceUnlockDLInstance(void)
 ; End of function android::AudioSystem::getVoiceUnlockDLInstance(void) */
 
+#include <stdint.h>
+
 /* Audio shim */
 extern "C" {
     void _ZN7android11AudioSystem24getVoiceUnlockDLInstanceEv() {}
@@ -30,4 +32,14 @@ extern "C" {
 extern "C" {
     void _ZN7android13MediaRecorder18setParametersExtraERKNS_7String8E() {}
     void _ZN7android9MtpServer17sendObjectUpdatedEj() {}
+}
+
+/* UI/GUI shim */
+extern "C" void _ZN7android4Rect10EMPTY_RECTE () {}
+extern "C" {
+    void _ZN7android14SurfaceControl8setLayerEj(uint32_t);
+
+    void _ZN7android14SurfaceControl8setLayerEi(int32_t layer){
+        _ZN7android14SurfaceControl8setLayerEj(static_cast<uint32_t>(layer));
+    }
 }
