@@ -96,11 +96,9 @@ PRODUCT_PACKAGES += \
     ebtables \
     ethertypes
 
-# Shims
+# Device symbols
 PRODUCT_PACKAGES += \
-libshim_vold \
-libshim_media \
-libshim_audio
+    libkarin
 
 # GPS
 PRODUCT_PACKAGES += \
