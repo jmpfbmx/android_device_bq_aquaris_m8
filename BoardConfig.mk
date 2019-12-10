@@ -5,27 +5,27 @@ KERNEL_SOURCE := kernel/bq/aquaris_m8
 # inherit from the proprietary version
 -include $(DEVICE_VENDOR)/BoardConfigVendor.mk
 
+# Headers
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_BASE)/include
 
+# Board
 TARGET_BOARD_PLATFORM_GPU := mali-720mp2
-
 TARGET_BOOTLOADER_BOARD_NAME := bq
 TARGET_NO_BOOTLOADER := true
 
+# ARCH
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_VARIANT := generic
-
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a15
-
 TARGET_CPU_SMP := true
 
-#Kernel
+# Kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_BASE)/prebuilt/Image.gz-dtb
 TARGET_KERNEL_ARCH := arm64
 BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x03f88000 --second_offset 0x00e88000 --tags_offset 0x0df88000 --base 0x40078000
@@ -141,11 +141,15 @@ MALLOC_SVELTE := true
 # Shims
 TARGET_LD_SHIM_LIBS := \
 /system/bin/vold|libshim_vold.so \
-/system/lib/libmedia_jni.so|libshim_media.so \
-/system/lib64/libmedia_jni.so|libshim_media.so \
-/system/lib/hw/audio.primary.mt8163.so|libshim_audio.so \
-/system/lib64/hw/audio.primary.mt8163.so|libshim_audio.so
+/system/lib/libmedia_jni.so|libkarin.so \
+/system/lib64/libmedia_jni.so|libkarin.so \
+/system/lib/hw/audio.primary.mt8163.so|libkarin.so \
+/system/lib64/hw/audio.primary.mt8163.so|libkarin.so \
+/system/lib/libandroid_runtime|libxlog.so \
+/system/lib64/libandroid_runtime|libxlog.so
 
+# libxlog
+TARGET_LDPRELOAD := libxlog.so
 
 # SELinux
 BOARD_SEPOLICY_DIRS := \

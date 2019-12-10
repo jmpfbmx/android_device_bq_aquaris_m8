@@ -98,7 +98,8 @@ PRODUCT_PACKAGES += \
 
 # Device symbols
 PRODUCT_PACKAGES += \
-    libkarin
+    libkarin \
+    libxlog
 
 # GPS
 PRODUCT_PACKAGES += \
